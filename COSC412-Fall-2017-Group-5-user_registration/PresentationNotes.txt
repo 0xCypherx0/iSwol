@@ -1,0 +1,64 @@
+SOFTWARE PRESENTATION NOTES
+1.1 ACCOUNTS
+Parent/Child: what this means is that they will share an account, but the parent will have a special login to the account. The purpose for this, is that will allow them special permissions that the child won’t such as medical records, payment information, and academic records. Sort of like a personal account administrator
+
+Admin account: will be given to school faculty and coaches.  Coaches and officials are allowed to track their athlete’s progress and performance using a process of updating statistics to the officials class dashboard. This will allow them to get a sense of who excels athletically to ensure higher performance sports teams.
+
+Medical Expert Account: rather than signing up for an account, medical experts are screened through an external process, they then have an account created for them to which they may go and change their login credentials. This account will allow them to give students advice to help maximize their health and performance for their respective sport. We thought this would be a good design choice so that if a student has a question about something, they can send a message to the medical expert(s) designated for their school and receive advice.
+
+1.2 REGISTRATION
+The ID number is the child's school student ID. the reason this is required is to prevent people who are not students from signing up(is this true? I thought it was an invitation system where students parents are sent email????)
+
+1.4 Self explanatory 
+
+1.5 SEARCH ENGINE FOR LOCAL FACILITIES
+
+The site will implement a filter function based on keywords and attempted loopholes to control what is displayed through the media applet to ensure only professional and positive interest is controlled.
+
+1.6 REDACTED
+
+1.7 
+Max points per day.
+
+
+
+
+
+SEQUENCE OF USE:
+
+LOGIN PROCESS:
+Self evident, there is a user and a server, the user tries to login, gets asked for login credentials, and then logs in
+	This will also feature options for forgotten password reset protocol
+	{this part is wrong}
+
+WEBPAGE MOBILITY:
+Will be mobile friendly when fully developed
+
+MATCH START-UP:
+Using this design, the players do not join a room until a challenger has joined the game. This decision was so that their isn't a bunch of room’s filled with only one person waiting for a game. 
+
+MATCH COMPLETION:
+This part is important because this is where the success of the student is recorded and is uploaded to the leaderboard.
+
+ROLES
+●	Chief Engineer & Architect	
+>Communication between client and team.
+        	>Ensures product meets the desired needs.
+        	>Guides interfacing and integration of solution parts.
+ 
+●	GUI Designer & Content Artist
+>Responsible for guiding look-and-feel decisions.
+            >Creating, editing, and enhancing graphical content.
+
+·         Designer
+> Finding solutions to known requirements. Exploring the requirement space.
+ 
+·        Coder - Advising on economic feasibility of implementing designs / requirements in available programming languages.
+
+    >>  Project Public Relations - Job is promoting the system and its features amongst the stakeholders – to maximize feedback, their participation in the development, and the visibility of the team and its outputs.
+·   >>      Project Facilitator
+Facilitating the interactions of the members of the core team
+Facilitating the interactions of the members of the extended team
+Facilitating the interactions between the core team and the extended team.
+Continually reminding people of the big picture.
+Maintaining synchronisation between the team’s plans and reality.
