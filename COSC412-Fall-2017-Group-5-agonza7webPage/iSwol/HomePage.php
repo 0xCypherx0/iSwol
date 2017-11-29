@@ -1,4 +1,5 @@
-<!doctype html>
+<?php include('../../server.php'); ?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -21,7 +22,7 @@
 
     <nav>
         <ul>
-            <a href="HomePage.html">
+            <a href="HomePage.php">
                 <li>Home</li>
             </a>
             </a>
@@ -42,55 +43,9 @@
 
             <div class="arrow-up"></div>
             </aside>
-            <div class="login-form">
-                <form>
-                    <label>Username</label>
-                    <div>
-                        <input type="text" placeholder="Username" required/>
-                    </div>
-                    <label>Password</label>
-                    <div>
-                        <input type="password" placeholder="Password" required/>
-                    </div>
-                    <div>
-                        <input type="submit" value="Log In" />
-                    </div>
-                    <div>
-                        <a href="#" style="text-decoration:none;position:center;top:20px;font-size:16px;color:gray;">Lost Your Password?</a>
-                    </div>
-                </form>
-            </div>
-            </section>
-
-
-            <script type="text/javascript">
-                $(document).ready(function() {
-                    var arrow = $(".arrow-up");
-                    var form = $(".login-form");
-                    var status = false;
-                    $("#login").click(function(event) {
-                        event.preventDefault();
-                        if (status == false) {
-                            arrow.fadeIn();
-                            form.fadeIn();
-                            status = true;
-                        } else {
-                            arrow.fadeOut();
-                            form.fadeOut();
-                            status = false;
-                        }
-                    })
-                })
-            </script>
         </ul>
         <div class="handle">Menu</div>
     </nav>
-
-
-
-
-
-
 
     <div class="sideright">
 
@@ -105,6 +60,21 @@
     </div>
 
     <div class="homePage">
+        <?php if (isset($_SESSION['success'])): ?>
+            <div class="error success">
+                <h3>
+                    <?php
+                        echo $_SESSION['success'];
+                        unset($_SESSION['success']);
+                    ?>
+                </h3>
+            </div>
+        <?php endif ?>
+
+        <?php if(isset($_SESSION["username"])): ?>
+            <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+            <p><a href="../../index.html?logout='1'" style="color: red;">Logout</a></p>
+        <?php endif ?>
 
         Imagine yourself in Gold's Gym in Venice, California, in 1968. It's a sunlit room lined with bricks and packed with well-loved benches, dumbbells, and barbells all being put to use. Everywhere you look, you see broad shoulders, narrow waists, and massive
         arms. But your eye keeps returning to one tall, mop-headed young guy as he does heavy dumbbell pull-overs barefoot on a bench. </p>

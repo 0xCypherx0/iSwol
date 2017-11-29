@@ -1,7 +1,7 @@
 <?php include('server.php'); 
 
     //Connect to database
-    $db = mysqli_connect('localhost:3360', 'root', 'no', 'iswol');
+    /*$db = mysqli_connect('localhost:3360', 'root', 'no', 'iswol');
 
     //Checks if there is a valid user and retrieves them from database.
     if(isset($_POST['email']) && isset($_POST['password'])) {
@@ -17,7 +17,7 @@
             die("Username or password is invalid");
         }*/
 
-        if($result == $row['email'] && resultPass == $row['password']) {
+       /* if($result == $row['email'] && resultPass == $row['password']) {
             header('Location: ../COSC412-Fall-2017-Group-5-agonza7webPage/iSwol/HomePage.html');
         }
 
@@ -27,7 +27,7 @@
 
         mysqli_close($db);        
         
-    }
+	}*/
 ?>
 
 <!DOCTYPE html>
@@ -50,18 +50,20 @@
 		}
 	</style>
 	<body>
-		</-- section starts here -->
+		<!-- section starts here -->
 		<section id ="home" style="background: url(images/background.jpg); background-size: 100% 100%;" class="cl_white text-center">
 				<div class="col-md-6">
 					<div class="page-header"><h3> Login </h3></div>
                     <form class="myForm" method="post" action="login.php">
+						<!-- display validation errors here -->
+						<?php include('errors.php');?>
 						<div class="form-group"> 
                             <label>Email</label> 
 							<input class="form-control" name="email" placeholder= "iSwol2much@somethingcool.com" type="text">
 						</div>
 						<div class="form-group"> 
                             <label>Password</label> 
-							<input class="form-control" name="password" placeholder= "Enter Password" type="text">
+							<input class="form-control" name="password" placeholder= "Enter Password" type="password">
 						</div>
                         <div>
                             <button type="submit" name="login" class="btn">Login</button>

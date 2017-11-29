@@ -1,8 +1,4 @@
 
-.val_error {
-    color: #FF1F1F;
-}
-
 .input group label {
     display: black;
     text-align: left;
@@ -28,7 +24,7 @@
 }
 
 .myForm {
-     height: 700px;
+     height: 650px;
      width: 350px;
      background-color: grey;
      margin-left: 500px;
@@ -38,8 +34,4 @@
      border-radius: 0px 0px 10px 10px;
      margin: 0px auto;
      padding: 20px;
-}
-
-.p {
-    color: red;
 }
