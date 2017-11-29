@@ -1,8 +1,10 @@
+<?php include('../server.php');?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
+        
 		<!-- Website CSS style -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -15,14 +17,15 @@
 
 		<title>Register</title>
 	</head>
-	<!--<body style="background: url(../images/background.jpg); background-size: 100% 100%;" class="cl_white text-center">
-		
+	<body style="background: url(../images/background.jpg); background-size: 100% 100%;" class="cl_white text-center">	
 		<div class="container">
 			<div class="row main">
 				<div class="main-login main-center">
-				<h5 style="text-align: center; font-size: 22px; color: grey;">Student can register account below</h5>
+				<h5 style="text-align: center; font-size: 22px; color: grey;">Register below</h5>
 					<form class="myForm" method="post" action="register.php">
-						<div class="form-group">
+                    <!-- display validation errors here -->
+                    <?php include('../errors.php');?>
+                        <div class="form-group">
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<label>First Name</label>
@@ -53,7 +56,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<label>Email</label>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+									<input type="text" class="form-control" name="email" placeholder="Enter your Email"/>
 								</div>
 							</div>
 						</div>
@@ -62,7 +65,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<label>Password</label>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+									<input type="password" class="form-control" name="password_1" id="password"  placeholder="Enter your Password"/>
 								</div>
 							</div>
 						</div>
@@ -71,7 +74,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<label>Confirm Password</label>
-									<input type="password" class="form-control" name="confirmPassword" id="confirm"  placeholder="Confirm your Password"/>
+									<input type="password" class="form-control" name="password_2" id="confirm"  placeholder="Confirm your Password"/>
 								</div>
 							</div>
 
@@ -79,23 +82,24 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<label>Activation Key</label>
-									<input type="password" class="form-control" name="actKey" id="password"  placeholder="Activation Key"/>
+									<input type="text" class="form-control" name="actKey" id="password"  placeholder="Activation Key"/>
 								</div>
 							</div>
 						</div>
 
 							<div>
 								<button class = "regBtn" type="submit" name="register">Register</button>
-							</div>
+                            </div>
+                            
+                            <p>
+							    Already a member? <a href="../login.php">Sign in</a>
+						    </p>
 						</div>
-						<p>
-							Already a member? <a href="login.html">Sign in</a>
-						</p>
 					</form>
 				</div>
 			</div>
 		</div>
-	-->
+
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

@@ -11,14 +11,14 @@
 
 .input-group input{
     height: 30px;
-    width: 93%;
+    width: 80%;
     font-size: 16px;
     padding: 5px 10px;
     border: 1px solid gray;
     border-radius: 5px;
 }
 
-.regBtn {
+.btn {
     height: 40px;
     width: 180px;
     margin-top: 30px;
@@ -28,7 +28,7 @@
 }
 
 .myForm {
-     height: 700px;
+     height: 540px;
      width: 350px;
      background-color: grey;
      margin-left: 500px;
