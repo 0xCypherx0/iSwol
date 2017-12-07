@@ -47,9 +47,10 @@
             $password = md5($password_1); //encrypts password before storing in database
             $sql = "INSERT INTO student (ActKey,Fname,Lname,Email,Username,Password) 
                         VALUES ('$actkey','$fname','$lname', '$email','$username', '$password')";
-            mysqli_query($db,$sql);
+            $result= mysqli_query($db,$sql);
+
             $_SESSION['username'] = $username;
-            header('location: ../COSC412-Fall-2017-Group-5-agonza7webPage/iSwol/HomePage.php'); //redirect to home page
+            header('location: ../login/login.php'); //redirect to login page
         }
     }
 
@@ -85,7 +86,7 @@
     if(isset($_GET['logout'])) {
         session_destroy();
         unset($_SESSION['username']);
-        header('location: login.php');
+        header('location: ../login.php');
     }
 
 ?>
