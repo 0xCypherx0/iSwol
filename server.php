@@ -1,6 +1,7 @@
 <?php
     session_start();
 
+    //Declare variables
     $username = "";
     $email = "";
     $errors = array();
@@ -59,7 +60,7 @@
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $password = mysqli_real_escape_string($db,$_POST['password']);
         
-        //ensure that forms fields are filled properly
+        //ensure that form fields are filled properly
         if(empty($email)) {
             array_push($errors, "* Email is required");
         }
@@ -74,7 +75,7 @@
             if(mysqli_num_rows($result) == 1) {
                 //log user in
                 $_SESSION['username'] = $username;
-                header('location: COSC412-Fall-2017-Group-5-agonza7webPage/iSwol/HomePage.php'); //redirect to home page
+                header('location: ../COSC412-Fall-2017-Group-5-agonza7webPage/iSwol/UserHomePage.php'); //redirect to home page
             }
              else {
                 array_push($errors, "* Wrong email/password combination");                

@@ -60,22 +60,6 @@
     </div>
 
     <div class="homePage">
-        <?php if (isset($_SESSION['success'])): ?>
-            <div class="error success">
-                <h3>
-                    <?php
-                        echo $_SESSION['success'];
-                        unset($_SESSION['success']);
-                    ?>
-                </h3>
-            </div>
-        <?php endif ?>
-
-        <?php if(isset($_SESSION["username"])): ?>
-            <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-            <p><a href="../../index.html?logout='1'" style="color: red;">Logout</a></p>
-        <?php endif ?>
-
         Imagine yourself in Gold's Gym in Venice, California, in 1968. It's a sunlit room lined with bricks and packed with well-loved benches, dumbbells, and barbells all being put to use. Everywhere you look, you see broad shoulders, narrow waists, and massive
         arms. But your eye keeps returning to one tall, mop-headed young guy as he does heavy dumbbell pull-overs barefoot on a bench. </p>
         <img src="arnold1.jpeg" align="right" margin="5px" height="330px" width="350" style="padding: 10px" alt="Arnold's Rules of Sucess"></p>
@@ -87,7 +71,6 @@
         Now it's your turn to take off. Over the next eight weeks, you're going to train and eat like Arnold in the days when he was forging the physique that introduced bodybuilding to the mainstream. But that's not all. You're going to steep yourself in his
         legend, in the form of stories, videos, and lore from Arnold and the training partners who knew him best. If you think Arnold's Blueprint is just an arrangement of reps and sets, you need a lesson in what truly made him the greatest of all time.
     </div>
-
 
     <script>
         $('.handle').on('click', function() {

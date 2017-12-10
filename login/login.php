@@ -40,7 +40,10 @@
                         </div>
                         <p>
                             Not yet a member? <a href="../register/register.php">Sign up</a>
-                        </p>
+						</p>
+						
+						<p> <a href="../forgotPassword.php">forgot password?</a> </p>
+
 					</form>
 				</div>
 		</section>
