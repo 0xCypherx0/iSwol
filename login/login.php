@@ -42,7 +42,7 @@
                             Not yet a member? <a href="../register/register.php">Sign up</a>
 						</p>
 						
-						<p> <a href="../forgotPassword.php">forgot password?</a> </p>
+						<p> <a href="../forgotPassword/forgotPassword.php">forgot password?</a> </p>
 
 					</form>
 				</div>

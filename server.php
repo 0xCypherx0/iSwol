@@ -45,9 +45,9 @@
 
         //if there are no errors, save user to database
         if(count($errors) == 0) {
-            $password = md5($password_1); //encrypts password before storing in database
+            //$password = md5($password_1); //encrypts password before storing in database
             $sql = "INSERT INTO student (ActKey,Fname,Lname,Email,Username,Password) 
-                        VALUES ('$actkey','$fname','$lname', '$email','$username', '$password')";
+                        VALUES ('$actkey','$fname','$lname', '$email','$username', '$password_1')";
             $result= mysqli_query($db,$sql);
 
             $_SESSION['username'] = $username;
