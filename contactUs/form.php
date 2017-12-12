@@ -1,5 +1,34 @@
-<?php include('form-process.php'); ?>
+<?php include('form-process.php');
+      include('../server.php');
+?>
 <link rel="stylesheet" href="style.css" type="text/css">
+
+<header>
+        <nav>
+            <ul>
+                <li><a href="../COSC412-Fall-2017-Group-5-agonza7webPage/iSwol/UserHomePage/UserHomePage.php">Home</a></li>
+                
+                <li><a href="../about/about.php">About</a></li>
+
+                <li><a href="#">Contact Us</a></li>
+
+                <?php if (isset($_SESSION['success'])): ?>
+            <div class="error success">
+                <h3>
+                    <?php
+                        echo $_SESSION['success'];
+                        unset($_SESSION['success']);
+                    ?>
+                </h3>
+            </div>
+            <?php endif ?>
+
+            <?php if(isset($_SESSION["username"])): ?>
+                <li><a href="../login/login.php">Logout</a></li>
+            <?php endif ?>
+            </ul>
+        </nav>
+</header>
 <div class="container">  
   <form id="contact" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
     <h3>Contact</h3>

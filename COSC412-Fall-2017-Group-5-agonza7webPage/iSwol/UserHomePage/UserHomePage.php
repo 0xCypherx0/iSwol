@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="UserHomePage.php">Home</a></li>
                 
-                <li><a href="#">About</a></li>
+                <li><a href="../../../about/about.php">About</a></li>
 
                 <li><a href="../../../contactUs/form.php">Contact Us</a></li>
 
@@ -48,11 +48,11 @@
                 <span></span>
             </div>
             <ul>
-                <li>Check records</li>
-                <li>Available experts</li>
-                <li>Coaches information</li>
-                <li>Map</li>
-                <li>Program's information</li>
+                <li><a href="../../../records/records.php">Check records</a></li>
+                <li><a href="../../../searchExpert/searchExpert.php">Available experts</a></li>
+                <li><a href="../../../coachinfo/coachinfo.php">Coaches information</a></li>
+                <li><a href="../../../map/map.php">Map</a></li>
+                <li><a href="../../../programinfo/programinfo.php">Program's information</a></li>
 
             </ul>
     </div>
