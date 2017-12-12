@@ -1,4 +1,42 @@
-<?php include('../server.php'); ?>
+<?php include('../server.php');
+
+	//your values are stored in cookies, then you can login without validate
+	if(isset($_COOKIE['name']) && isset($_COOKIE['pwd']))
+	{
+    	header('location:welcome.php');
+	}
+	// login validation in php
+	if(isset($_POST['submit']))
+	{
+ 		mysql_connect('localhost','root','') or die(mysql_error());
+ 		mysql_select_db('new')  or die(mysql_error());
+ 		$name=$_POST['name'];
+ 		$pwd=$_POST['pwd'];
+ 	if($name!=''&&$pwd!='')
+ 	{
+   		$query=mysql_query("select * from login where name='".$name."' and password='".$pwd."' ")  or die(mysql_error());
+   		$res=mysql_fetch_row($query);
+   	if($res)
+   	{
+    if(isset($_POST['remember']))
+ 	{
+   		setcookie('name',$name, time() + (60*60*24*1));
+   		setcookie('pwd',$pwd, time() + (60*60*24*1));
+ 	}
+    	$_SESSION['name']=$name;
+   	 	header('location:welcome.php');
+   	}
+  	else
+   	{
+    	echo'You entered username or password is incorrect';
+   	}
+}
+ else
+ {
+  echo'Enter both username and password';
+ }
+}
+?>
 
 <!DOCTYPE html>
 <html>
