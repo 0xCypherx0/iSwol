@@ -10,6 +10,8 @@
                 
                 <li><a href="../about/about.php">About</a></li>
 
+                <li><a href="../game/iSwol-gamebranch/iSwol-gamebranch/game.php">Game</a></li>
+
                 <li><a href="#">Contact Us</a></li>
 
                 <?php if (isset($_SESSION['success'])): ?>

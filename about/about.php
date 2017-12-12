@@ -12,6 +12,8 @@
                 
                 <li><a href="#">About</a></li>
 
+                <li><a href="../game/iSwol-gamebranch/iSwol-gamebranch/game.php">Game</a></li>
+
                 <li><a href="../contactUs/form.php">Contact Us</a></li>
 
                 <?php if (isset($_SESSION['success'])): ?>
