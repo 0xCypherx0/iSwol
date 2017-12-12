@@ -75,7 +75,7 @@
             if(mysqli_num_rows($result) == 1) {
                 //log user in
                 $_SESSION['username'] = $username;
-                header('location: ../COSC412-Fall-2017-Group-5-agonza7webPage/iSwol/UserHomePage.php'); //redirect to home page
+                header('location: ../COSC412-Fall-2017-Group-5-agonza7webPage/iSwol/UserHomePage/UserHomePage.php'); //redirect to home page
             }
              else {
                 array_push($errors, "* Wrong email/password combination");                
@@ -87,7 +87,7 @@
     if(isset($_GET['logout'])) {
         session_destroy();
         unset($_SESSION['username']);
-        header('location: ../login.php');
+        header('location: ../../login.php');
     }
 
 ?>
