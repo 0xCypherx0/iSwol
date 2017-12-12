@@ -21,7 +21,7 @@
                 
                 <li><a href="#">About</a></li>
 
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="../../../contactUs/form.php">Contact Us</a></li>
 
                 <?php if (isset($_SESSION['success'])): ?>
             <div class="error success">
