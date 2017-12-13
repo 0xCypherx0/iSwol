@@ -15,7 +15,7 @@ body {
 }
 
 input[type="text"], input[type="password"] {
-    height: 45px;
+    height: 25px;
     width: 300px;
     font-size: 15px;
     margin-bottom: 20px;
@@ -37,40 +37,3 @@ input[type="text"], input[type="password"] {
 p {
     color: #fff;
 }
-/*
-.input group label {
-    display: black;
-    text-align: left;
-    margin: 3px;
-}
-
-.input-group input{
-    height: 30px;
-    width: 80%;
-    font-size: 16px;
-    padding: 5px 10px;
-    border: 1px solid gray;
-    border-radius: 5px;
-}
-
-.btn {
-    height: 40px;
-    width: 180px;
-    margin-top: 30px;
-    margin-left: 85px;
-    border-radius: 10px;
-    background-color: lightblue;
-}
-
-.myForm { 
-     height: 540px;
-     width: 350px;
-     background-color: grey;
-     margin-left: 500px;
-     margin-top: 40px;
-     opacity: 0.8;
-     border: 1px solid #000000;
-     border-radius: 0px 0px 10px 10px;
-     margin: 0px auto;
-     padding: 20px;
-} */

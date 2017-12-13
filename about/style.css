@@ -55,3 +55,7 @@ header {
     width: 100%;
   }
   
+  .para2 {
+    font-family:"Open Sans", Helvetica, Arial, sans-serif;    
+    margin-left: 5px;
+  }
