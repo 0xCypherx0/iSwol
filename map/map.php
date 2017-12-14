@@ -1,74 +1,12 @@
-<!--
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Place details</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style>
-        /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-        
-        #map {
-            height: 60%;
-        }
-        /* Optional: Makes the sample page fill the window. */
-        
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
-    <script>
-        // This example requires the Places library. Include the libraries=places
-        // parameter when you first load the API. For example:
-        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: {
-                    lat: 39.3925109,
-                    lng: -76.612038
-                },
-                zoom: 10
-            });
-            var infowindow = new google.maps.InfoWindow();
-            var service = new google.maps.places.PlacesService(map);
-            service.getDetails({
-                placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4'
-            }, function(place, status) {
-                if (status === google.maps.places.PlacesServiceStatus.OK) {
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: place.geometry.location
-                    });
-                    google.maps.event.addListener(marker, 'click', function() {
-                        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-                            'Place ID: ' + place.place_id + '<br>' +
-                            place.formatted_address + '</div>');
-                        infowindow.open(map, this);
-                    });
-                }
-            });
-        }
-    </script>
-</head>
-<body>
-    <div id="map"></div>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_GjFooHn3KBvxuZrTfYX5hZIZ8yD6kTI&libraries=places&callback=initMap">
-    </script>
-    <div>
-        This is after the maps
-    </div>
-</body>
-</html> -->
+<?php include('../server.php'); ?>
 
 <!DOCTYPE html>
 <html>
+        <title>Map</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+<header>
 
-<head>
-    <title>Place Autocomplete</title>
+<title>Place Autocomplete</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -155,9 +93,35 @@
             padding: 6px 12px;
         }
     </style>
-</head>
 
-<body>
+        <nav>
+            <ul>
+                <li><a href=="../COSC412-Fall-2017-Group-5-agonza7webPage/iSwol/UserHomePage/UserHomePage.php">Home</a></li>
+                
+                <li><a href="../about/about.php">About</a></li>
+
+                <li><a href="../game/iSwol-gamebranch/iSwol-gamebranch/game.php">Game</a></li>
+
+                <li><a href="../contactUs/form.php">Contact Us</a></li>
+
+                <?php if (isset($_SESSION['success'])): ?>
+            <div class="error success">
+                <h3>
+                    <?php
+                        echo $_SESSION['success'];
+                        unset($_SESSION['success']);
+                    ?>
+                </h3>
+            </div>
+            <?php endif ?>
+
+            <?php if(isset($_SESSION["username"])): ?>
+                <li><a href="../login/login.php">Logout</a></li>
+            <?php endif ?>
+            </ul>
+        </nav>
+    </header>
+    <body>
     <div class="pac-card" id="pac-card">
         <div>
             <div id="title">
@@ -276,5 +240,6 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_GjFooHn3KBvxuZrTfYX5hZIZ8yD6kTI&libraries&libraries=places&callback=initMap" async defer></script>
 </body>
+
 
 </html>

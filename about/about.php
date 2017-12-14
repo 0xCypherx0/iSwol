@@ -55,7 +55,7 @@ The general purpose of the website would be to create a fun, interactive learnin
 
             <div style="display:inline;">
                 <h3>Welcome fellow athlete's</h3>
-                <p class="para2">Spartan Technologies is currently a start up Mobile Application Developing company founded by Towson University Students Montrell Jubilee, David Hanlon, and Jared Conn on March 31st, 2017. Here at SparTek, our primary mission is to create simplistic, efficient, and graphically appealing mobile  applications for our customers to utilize.</p>
+                <p class="para2">iSwol Technologies is currently a start up Web Developing company founded by Towson University Students Montrell Jubilee, James Ream, Andy Campos, Darian Hegberg, and Abdoulkarim Dambo on August 31st, 2017. Here at iSwol, our primary mission is to create simplistic, efficient, and graphically appealing web  applications for our customers to utilize.</p>
             </div>
         </div>
     </body>
