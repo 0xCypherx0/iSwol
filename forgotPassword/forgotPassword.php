@@ -18,11 +18,11 @@
     <body>
         <h1>Forgot Password<h1>
         <form action='#' method='post'>
-    <table cellspacing='5' align='center'>
-        <tr><td>Email:</td><td><input type='text' name='mail'/></td></tr>
-        <tr><td></td><td><input type='submit' name='submit' value='Submit'/></td></tr>
-    </table>
-    </form>
+            <table cellspacing='5' align='center'>
+                <tr><td>Email:</td><td><input type='text' name='mail'/></td></tr>
+                <tr><td></td><td><input type='submit' name='submit' value='Submit'/></td></tr>
+            </table>
+        </form>
     <?php
 
         

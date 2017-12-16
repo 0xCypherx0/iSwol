@@ -1,5 +1,5 @@
 <?php include('../server.php');
-
+/*
 	//your values are stored in cookies, then you can login without validate
 	if(isset($_COOKIE['name']) && isset($_COOKIE['pwd']))
 	{
@@ -35,8 +35,8 @@
  {
   echo'Enter both username and password';
  }
-}
-?>
+	}*/
+?> 
 
 <!DOCTYPE html>
 <html>

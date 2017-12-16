@@ -94,7 +94,7 @@
         }
     </style>
 
-        <nav>
+        <nav class="menu">
             <ul>
                 <li><a href=="../COSC412-Fall-2017-Group-5-agonza7webPage/iSwol/UserHomePage/UserHomePage.php">Home</a></li>
                 
@@ -103,6 +103,8 @@
                 <li><a href="../game/iSwol-gamebranch/iSwol-gamebranch/game.php">Game</a></li>
 
                 <li><a href="../contactUs/form.php">Contact Us</a></li>
+
+                <li><a href="../map/map.php">Map</a></li>
 
                 <?php if (isset($_SESSION['success'])): ?>
             <div class="error success">
@@ -119,6 +121,10 @@
                 <li><a href="../login/login.php">Logout</a></li>
             <?php endif ?>
             </ul>
+            <form class="search-form">
+                  <input type="text" placeholder="Search">
+                  <button>Search</button>
+            </form>
         </nav>
     </header>
     <body>

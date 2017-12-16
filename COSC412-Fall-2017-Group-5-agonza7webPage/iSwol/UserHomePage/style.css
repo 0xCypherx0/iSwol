@@ -1,100 +1,68 @@
-#sidebar {
-  position:fixed;
-  width:200px;
-  height:100%;
-  background:#151719;
-  left:-200px;
-  transition: all 500ms linear;
-}
-
-#sidebar.active {
-  left:0px;
-}
-
-#sidebar ul li {
-  color:rgba(230,230,230,0.9);
-  list-style:none;
-  padding:15px 10px;
-  border-bottom: 1px solid rgba(100,100,100,0.3);
-}
-
-#sidebar .toggle-btn {
-  position: absolute;
-  left:230px;
-  top:20px;
-}
-
-#sidebar .toggle-btn span {
-  display: block;
-  width:30px;
-  height:5px;
-  background:#151719;
-  margin:5px 0px;
-}
 
 body {
 	margin: 0;
-	background: #fff;
+	background: skyblue;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 400;
 }
 
-header {
-  background: #55d6aa;
+.menu {
+    width:100%;
+    background: #142b47;
+    overflow:auto;
 }
 
-header::after {
-  content: '';
-  display: table;
-  clear: both;
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 60px;
 }
 
-nav {
-  float: right;
+.menu li {
+  float: left;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav li {
-  display: inline-block;
-  margin-left: 70px;
-  padding-top: 23px;
-
-  position: relative;
-}
-
-nav a {
-  color: #444;
+.menu ul li a {
+  background: #142b47;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #000;
-}
-
-nav a::before {
-  content: '';
+  width: 130px;
   display: block;
-  height: 5px;
-  background-color: #444;
-
-  position: absolute;
-  top: 0;
-  width: 0%;
-
-  transition: all ease-in-out 250ms;
+  text-align: center;
+  color: #f2f2f2;
+  font-size: 18px;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
 }
 
-nav a:hover::before {
-  width: 100%;
+.menu li a:hover {
+    color: #fff;
+    opacity:0.5;
+    font-size: 19px; 
 }
 
-.wrapper {
-  margin-top: 150px;
+.search-form {
+  margin-top: 15px;
+  float: right;
+  margin-right: 100px;
+}
+
+input[type=text] {
+  padding: 7px;
+  border: none;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+button {
+  float: right;
+  background: orange;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  position: relative;
+  padding: 7px;
+  font-family: sans-serif;
+  border: none;
+  font-size: 16px;
 }

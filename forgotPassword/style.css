@@ -1,11 +1,26 @@
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+}
+
 .container {
-    width: 40%;
-    margin: 0 auto;
-    background-color: #f7f7f7;
-    color: #757575;
-    font-family: 'Raleway', sans-serif;
-    text-align: left;
-    padding: 30px;
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    background-color: rgba(52,73,94,0.5);
+    border-radius: 4px;
+    margin-top: 150px;    
 }
 h2 {
     font-size: 30px;

@@ -15,7 +15,7 @@
     <body>
     
     <header>
-        <nav>
+        <nav class="menu">
             <ul>
                 <li><a href="UserHomePage.php">Home</a></li>
                 
@@ -27,8 +27,6 @@
                 
                 <li><a href="../../../map/map.php">Map</a></li>
                 
-                <li><a href="../../../programinfo/programinfo.php">Program's information</a></li>
-
                 <?php if (isset($_SESSION['success'])): ?>
             <div class="error success">
                 <h3>
@@ -44,16 +42,15 @@
                 <li><a href="../../../login/login.php">Logout</a></li>
             <?php endif ?>
             </ul>
+            <form class="search-form">
+                    <input type="text" placeholder="Search">
+                    <button>Search</button>
+            </form>
+
         </nav>
     </header>
 
-    <div id="sidebar">
-        <div class="toggle-btn" onclick="toggleSidebar()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="wrapper">
+    <div>
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_s-xclick">
                 <input type="hidden" name="hosted_button_id" value="Q7AZ55WSJJBAJ">
@@ -67,15 +64,7 @@
                 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
             </form>
-        </div>    
-    </div>
-
-    <script>
-
-      function toggleSidebar() {
-        document.getElementById("sidebar").classList.toggle('active');
-      }  
-    </script>
+        </div>   
     
 </body>
 </html>
